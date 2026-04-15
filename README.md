@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+# Discord Bot – Python
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multifunctional Discord bot built with **Python**, designed to handle moderation, utilities, giveaways, currency conversion, weather data, and more.
 
-Currently, two official plugins are available:
+This project also includes a small **web page** where users can invite the bot to their servers and view all available commands.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Moderation tools (purge messages)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Utility commands (dice, say, sum)
 
-## Expanding the ESLint configuration
+- Weather information
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Currency conversion
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Exchange rate lookup (USD → BRL)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Giveaway sorter
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Web interface for inviting the bot and browsing the command list
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Python 3
+- discord.py
+- External APIs for: Weather data, Currency exchange rates
+- Web page built with modern frontend tools (React/Vite/JS + Tailwind CSS)
+
+## Web Page
+
+- The project includes a small web interface where users can:
+- Invite the bot to their Discord server
+- View the full list of commands
+
+You can access the page at:
+<https://discord-bot-page-beige.vercel.app>
+
+---
+
+Built with ❤️ by [Kaue Barbi](https://kabarbi.vercel.app)
