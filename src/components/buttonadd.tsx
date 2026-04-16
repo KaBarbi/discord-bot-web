@@ -1,16 +1,78 @@
+import styled from 'styled-components'
+
 const ButtonAdd = () => {
   return (
-    <a
-      href="https://discord.com/oauth2/authorize?client_id=1306407860493877258&scope=bot%20applications.commands&permissions=8"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative inline-block px-12 py-2 text-[17px] font-normal uppercase text-[#5865f2] border border-[#5865f2] rounded-md overflow-hidden transition-all duration-500 group hover:text-[#0a191e]"
-    >
-      Add
-      <span className="absolute -top-4 -left-4 w-10 h-10 bg-[#5865f2] rounded-full transition-all duration-700 ease-in-out group-hover:w-105 group-hover:h-105 z-[-1]" />
-      <span className="absolute -bottom-4 -right-4 w-10 h-10 bg-[#5865f2] rounded-full transition-all duration-700 ease-in-out group-hover:w-105 group-hover:h-105 z-[-1]" />
-    </a>
+    <StyledWrapper>
+      <a
+        href="https://discord.com/oauth2/authorize?client_id=1306407860493877258&scope=bot%20applications.commands&permissions=8"
+        className="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Add
+      </a>
+    </StyledWrapper>
   )
 }
+
+const StyledWrapper = styled.div`
+  .button {
+    --color: #5865f2;
+    padding: 0.3em 3.2em;
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  .button:hover::before,
+  .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+
+  .button:hover {
+    color: rgb(10, 25, 30);
+  }
+
+  .button:active {
+    filter: brightness(0.8);
+  }
+`
 
 export default ButtonAdd
