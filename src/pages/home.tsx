@@ -3,29 +3,31 @@ import ButtonCmd from '../components/buttoncmd'
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 gap-6">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 gap-6">
+      
       {/* Card principal */}
-      <div className="flex items-center bg-[#202225] rounded-xl shadow-lg max-w-900 w-full p-8 gap-8">
+      <div className="flex flex-col md:flex-row items-center bg-[#202225] rounded-xl shadow-lg w-full max-w-[900px] p-5 sm:p-8 gap-6 md:gap-8">
+        
         {/* IMAGEM */}
         <img
           src="/images/gleiceAI.png"
           alt="Gleice Bot"
-          className="w-50 h-auto object-cover rounded-xl shrink-0"
+          className="w-32 sm:w-40 md:w-50 h-auto object-cover rounded-xl shrink-0"
         />
 
         {/* CONTEÚDO */}
-        <div className="flex flex-col justify-center items-start flex-1">
-          <h2 className="text-3xl font-bold text-white mb-3 leading-tight">
+        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
             Gleice Discord Bot
           </h2>
 
-          <p className="text-[#b9bbbe] text-lg mb-6 max-w-150 leading-relaxed">
+          <p className="text-[#b9bbbe] text-base sm:text-lg mb-6 max-w-full md:max-w-[600px] leading-relaxed">
             Personal project created to explore and expand my programming
             knowledge. Through it, I am learning to develop and integrate
             various technologies.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <ButtonAdd />
             <ButtonCmd />
           </div>
@@ -33,15 +35,17 @@ const Home = () => {
       </div>
 
       {/* Card contato */}
-      <div className="w-full max-w-225 bg-[#202225] rounded-xl p-6 shadow-lg">
-        <h3 className="text-xl font-semibold text-white mb-3">Contact Me</h3>
+      <div className="w-full max-w-[900px] bg-[#202225] rounded-xl p-5 sm:p-6 shadow-lg">
+        <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">
+          Contact Me
+        </h3>
 
-        <p className="text-lg text-[#b9bbbe] mb-5 leading-relaxed">
+        <p className="text-base sm:text-lg text-[#b9bbbe] mb-5 leading-relaxed">
           Feel free to try and help me improve this project. For questions,
           suggestions, or reporting issues, contact me through the means below:
         </p>
 
-        <div className="space-y-3 text-white text-base">
+        <div className="space-y-3 text-white text-sm sm:text-base">
           <p>
             <strong>Email: </strong>
             <a
@@ -62,7 +66,9 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <p className="text-[#b9bbbe] select-none text-md">Barbi © 2026</p>
+      <p className="text-[#b9bbbe] select-none text-md sm:text-md">
+        Barbi © 2026
+      </p>
     </div>
   )
 }
