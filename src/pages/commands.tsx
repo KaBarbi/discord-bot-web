@@ -1,3 +1,5 @@
+import ButtonBack from '../components/ButtonBack'
+
 type Command = {
   command: string
   description: string
@@ -86,9 +88,7 @@ function Commands() {
             examples.
           </p>
 
-          <button className="flex items-center gap-2 border border-[#5865f2] text-[#5865f2] px-4 py-2 rounded-md hover:bg-[#5865f2]/10 transition">
-            ← Return
-          </button>
+          <ButtonBack />
         </div>
 
         {/* CONTAINER */}
