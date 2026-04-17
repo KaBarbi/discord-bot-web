@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 
-// import Commands from './pages/Commands'
+import CommandsPage from './pages/commands'
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/commands" element={<Commands />} /> */}
+      <Route path="/commands" element={<CommandsPage />} />
     </Routes>
   )
 }

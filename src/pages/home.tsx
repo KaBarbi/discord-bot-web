@@ -34,7 +34,7 @@ const Home = () => {
 
       {/* Card contato */}
       <div className="w-full max-w-225 bg-[#202225] rounded-xl p-6 shadow-lg">
-        <h3 className="text-lg font-semibold text-white mb-3">Contact Me</h3>
+        <h3 className="text-xl font-semibold text-white mb-3">Contact Me</h3>
 
         <p className="text-lg text-[#b9bbbe] mb-5 leading-relaxed">
           Feel free to try and help me improve this project. For questions,
