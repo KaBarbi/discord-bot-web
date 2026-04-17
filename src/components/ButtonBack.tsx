@@ -26,7 +26,9 @@ function ButtonBack() {
       </div>
 
       {/* Text */}
-      <span className="relative z-20 translate-x-4">Return</span>
+      <span className="relative z-20 translate-x-4 transition-opacity duration-300 group-hover:opacity-0">
+        Return
+      </span>
     </Link>
   )
 }

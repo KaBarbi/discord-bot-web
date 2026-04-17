@@ -74,7 +74,7 @@ const categories: Category[] = [
 
 function Commands() {
   return (
-    <div className="w-screen min-h-screen flex justify-center items-start p-6">
+    <div className="w-full min-h-225 flex justify-center items-start p-6 mt-5">
       <div className="w-full max-w-225 flex flex-col gap-6">
         {/* CARD RETURN */}
         <div className="bg-[#202225] rounded-xl p-6 shadow-lg">
@@ -129,6 +129,10 @@ function Commands() {
             </div>
           ))}
         </div>
+        {/* FOOTER */}
+        <p className="text-[#b9bbbe] select-none text-md text-center mt-2">
+          Barbi © 2026
+        </p>
       </div>
     </div>
   )
